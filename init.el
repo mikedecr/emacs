@@ -96,16 +96,23 @@
   (evil-collection-init))
 
 
+(use-package which-key
+  :init (which-key-mode)
+  :diminish which-key-mode)
+
+(use-package nord-theme
+  :init (load-theme 'nord t))
+
 
 ;; ---- custom variables danger zone ----
-
- (custom-set-variables
+ 
+(custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(doom-modeline ivy command-log-mode use-package evil-collection auto-package-update)))
+   '(nord-theme nord whichkey doom-modeline ivy command-log-mode use-package evil-collection auto-package-update)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
